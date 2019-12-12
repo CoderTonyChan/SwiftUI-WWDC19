@@ -23,7 +23,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = RoomList(store: RoomStore(testData))
 
         // Landmark
-        let contentView = LandmarkList().environmentObject(UserData())
+//        let contentView = LandmarkList().environmentObject(UserData())
+        
+        let contentView = Badge()
+        
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
