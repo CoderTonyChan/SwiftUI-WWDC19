@@ -28,10 +28,12 @@ struct Home: View {
     var body: some View {
         NavigationView {
             List {
-                FeaturedLandmarks(landmarks: featured)
-                .scaledToFill()
-                .frame(height: 200)
-                .clipped().listRowInsets(EdgeInsets())
+                PageView(features.map { FeatureCard(landmark: $0) }).frame(height: 200).scaledToFill().listRowInsets(EdgeInsets())
+//                FeaturedLandmarks(landmarks: featured)
+//                .scaledToFill()
+//                .frame(height: 200)
+//                .clipped().listRowInsets(EdgeInsets())
+                
                 ForEach(categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: self.categories[key]!)
                 }.listRowInsets(EdgeInsets())
