@@ -50,6 +50,13 @@
 		ACB44C6223A1E31400B3EF45 /* HikeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C6123A1E31400B3EF45 /* HikeDetail.swift */; };
 		ACB44C6423A1E36400B3EF45 /* hikeData.json in Resources */ = {isa = PBXBuildFile; fileRef = ACB44C6323A1E36400B3EF45 /* hikeData.json */; };
 		ACB44C6623A1E39C00B3EF45 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C6523A1E39C00B3EF45 /* GraphCapsule.swift */; };
+		ACB44C6923A1EBD200B3EF45 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C6823A1EBD200B3EF45 /* Home.swift */; };
+		ACB44C6B23A1EE9300B3EF45 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C6A23A1EE9300B3EF45 /* CategoryRow.swift */; };
+		ACB44C6E23A21D2500B3EF45 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C6D23A21D2500B3EF45 /* ProfileHost.swift */; };
+		ACB44C7223A21D9300B3EF45 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C7123A21D9300B3EF45 /* Profile.swift */; };
+		ACB44C7423A21E7A00B3EF45 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C7323A21E7A00B3EF45 /* ProfileSummary.swift */; };
+		ACB44C7623A21FCD00B3EF45 /* HikeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C7523A21FCD00B3EF45 /* HikeBadge.swift */; };
+		ACB44C7823A2263800B3EF45 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB44C7723A2263800B3EF45 /* ProfileEditor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +105,13 @@
 		ACB44C6123A1E31400B3EF45 /* HikeDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeDetail.swift; sourceTree = "<group>"; };
 		ACB44C6323A1E36400B3EF45 /* hikeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hikeData.json; sourceTree = "<group>"; };
 		ACB44C6523A1E39C00B3EF45 /* GraphCapsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
+		ACB44C6823A1EBD200B3EF45 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		ACB44C6A23A1EE9300B3EF45 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		ACB44C6D23A21D2500B3EF45 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		ACB44C7123A21D9300B3EF45 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		ACB44C7323A21E7A00B3EF45 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
+		ACB44C7523A21FCD00B3EF45 /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
+		ACB44C7723A2263800B3EF45 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +145,8 @@
 		ACB44B98239F97D100B3EF45 /* SwiftUI-WWDC19 */ = {
 			isa = PBXGroup;
 			children = (
+				ACB44C6C23A21CF200B3EF45 /* Profile */,
+				ACB44C6723A1EBC800B3EF45 /* Complex Interfaces */,
 				ACB44C5A23A1E27F00B3EF45 /* Animating */,
 				ACB44C4F23A1E10700B3EF45 /* Draw */,
 				ACB44C0623A0EE9400B3EF45 /* Landmark */,
@@ -234,6 +250,27 @@
 			path = Animating;
 			sourceTree = "<group>";
 		};
+		ACB44C6723A1EBC800B3EF45 /* Complex Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				ACB44C6823A1EBD200B3EF45 /* Home.swift */,
+				ACB44C6A23A1EE9300B3EF45 /* CategoryRow.swift */,
+			);
+			path = "Complex Interfaces";
+			sourceTree = "<group>";
+		};
+		ACB44C6C23A21CF200B3EF45 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				ACB44C6D23A21D2500B3EF45 /* ProfileHost.swift */,
+				ACB44C7123A21D9300B3EF45 /* Profile.swift */,
+				ACB44C7323A21E7A00B3EF45 /* ProfileSummary.swift */,
+				ACB44C7523A21FCD00B3EF45 /* HikeBadge.swift */,
+				ACB44C7723A2263800B3EF45 /* ProfileEditor.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,10 +359,14 @@
 			files = (
 				ACB44C1523A0EE9500B3EF45 /* Landmark.swift in Sources */,
 				ACB44C5923A1E10700B3EF45 /* Badge.swift in Sources */,
+				ACB44C7423A21E7A00B3EF45 /* ProfileSummary.swift in Sources */,
+				ACB44C7223A21D9300B3EF45 /* Profile.swift in Sources */,
 				ACB44BB5239F984800B3EF45 /* RoomStore.swift in Sources */,
 				ACB44C1023A0EE9500B3EF45 /* MapView.swift in Sources */,
+				ACB44C7823A2263800B3EF45 /* ProfileEditor.swift in Sources */,
 				ACB44C5E23A1E2DB00B3EF45 /* Hike.swift in Sources */,
 				ACB44B9A239F97D100B3EF45 /* AppDelegate.swift in Sources */,
+				ACB44C6923A1EBD200B3EF45 /* Home.swift in Sources */,
 				ACB44C5623A1E10700B3EF45 /* HexagonParameters.swift in Sources */,
 				ACB44BB7239F984800B3EF45 /* RoomList.swift in Sources */,
 				ACB44C6023A1E2F300B3EF45 /* HikeGraph.swift in Sources */,
@@ -335,12 +376,15 @@
 				ACB44BB6239F984800B3EF45 /* Room.swift in Sources */,
 				ACB44C1723A0EE9500B3EF45 /* LandmarkRow.swift in Sources */,
 				ACB44C1423A0EE9500B3EF45 /* UserData.swift in Sources */,
+				ACB44C6B23A1EE9300B3EF45 /* CategoryRow.swift in Sources */,
 				ACB44C5723A1E10700B3EF45 /* BadgeSymbol.swift in Sources */,
 				ACB44C1123A0EE9500B3EF45 /* CircleImage.swift in Sources */,
+				ACB44C7623A21FCD00B3EF45 /* HikeBadge.swift in Sources */,
 				ACB44B9C239F97D100B3EF45 /* SceneDelegate.swift in Sources */,
 				ACB44C5C23A1E28B00B3EF45 /* HikeView.swift in Sources */,
 				ACB44B9E239F97D100B3EF45 /* ContentView.swift in Sources */,
 				ACB44C6623A1E39C00B3EF45 /* GraphCapsule.swift in Sources */,
+				ACB44C6E23A21D2500B3EF45 /* ProfileHost.swift in Sources */,
 				ACB44BB4239F984800B3EF45 /* RoomDetail.swift in Sources */,
 				ACB44C1223A0EE9500B3EF45 /* LandmarkList.swift in Sources */,
 				ACB44C5523A1E10700B3EF45 /* RotatedBadgeSymbol.swift in Sources */,

@@ -25,8 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Landmark
 //        let contentView = LandmarkList().environmentObject(UserData())
         
-        let contentView = Badge()
+        // Drawing & Animation
+//        let contentView = Badge()
         
+        // UI 1.全局调用一次就可以 2.重复调用好似也没事 environmentObject 
+        let contentView = Home().environmentObject(UserData())
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

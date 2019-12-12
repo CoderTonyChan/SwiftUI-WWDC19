@@ -14,7 +14,6 @@ struct LandmarkList: View {
     
     
     var body: some View {
-        NavigationView{
             List {
                 // 这里Toggle是用了binding
                 Toggle(isOn: $userData.showFavoritesOnly){
@@ -23,22 +22,24 @@ struct LandmarkList: View {
                 
                 ForEach(userData.landmarks){landmark in
                     if !self.userData.showFavoritesOnly || landmark.isFavorite{
-                        NavigationLink(destination: LandmarkDetail(landmark:landmark).environmentObject(self.userData)){
+                        NavigationLink(destination:
+                        LandmarkDetail(landmark:landmark).environmentObject(self.userData)){
                             LandmarkRow(landmark: landmark)
                         }
                     }
                 }
             }.navigationBarTitle("Landmarks")
         }
-    }
 }
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
-            LandmarkList()
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
+            NavigationView{
+                LandmarkList()
+                    .previewDevice(PreviewDevice(rawValue: deviceName))
+                    .previewDisplayName(deviceName)
+            }
         }.environmentObject(UserData())
     }
 }
