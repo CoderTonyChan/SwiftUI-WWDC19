@@ -8,6 +8,7 @@ Helpers for loading images and data.
 import UIKit
 import SwiftUI
 import CoreLocation
+import ImageIO // 要显式引入 不然watchos会报错
 
 var landmarkData: [Landmark] = load("landmarkData.json")
 let features = landmarkData.filter { $0.isFeatured }

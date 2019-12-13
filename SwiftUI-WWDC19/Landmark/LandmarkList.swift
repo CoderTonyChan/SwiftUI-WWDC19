@@ -8,10 +8,12 @@
 
 import SwiftUI
 
-struct LandmarkList: View {
+struct LandmarkList<DetailView: View>: View {
 //    @State var showFavoritesOnly = false
     @EnvironmentObject var userData: UserData
     
+    // 方法来的 传方法相当于闭包(会回调出去Landmark)
+    let detailViewProducer: (Landmark) -> DetailView
     
     var body: some View {
             List {
@@ -23,7 +25,7 @@ struct LandmarkList: View {
                 ForEach(userData.landmarks){landmark in
                     if !self.userData.showFavoritesOnly || landmark.isFavorite{
                         NavigationLink(destination:
-                        LandmarkDetail(landmark:landmark).environmentObject(self.userData)){
+                        self.detailViewProducer(landmark).environmentObject(self.userData)){
                             LandmarkRow(landmark: landmark)
                         }
                     }
@@ -32,14 +34,24 @@ struct LandmarkList: View {
         }
 }
 
+
+
+#if os(watchOS)
+typealias PreviewDetailView = WatchLandmarkDetail
+#else
+typealias PreviewDetailView = LandmarkDetail
+#endif
+
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
-            NavigationView{
-                LandmarkList()
-                    .previewDevice(PreviewDevice(rawValue: deviceName))
-                    .previewDisplayName(deviceName)
-            }
-        }.environmentObject(UserData())
+//        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+//            NavigationView{
+//                LandmarkList { LandmarkDetail(landmark: $0) }
+//                    .previewDevice(PreviewDevice(rawValue: deviceName))
+//                    .previewDisplayName(deviceName)
+//            }
+//        }.environmentObject(UserData())
+        LandmarkList { PreviewDetailView(landmark: $0) }
+        .environmentObject(UserData())
     }
 }

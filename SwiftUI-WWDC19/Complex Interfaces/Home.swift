@@ -39,7 +39,7 @@ struct Home: View {
                 }.listRowInsets(EdgeInsets())
                 
                 //NavigationLink里面不能嵌套NavigationView
-                NavigationLink(destination: LandmarkList()) {
+                NavigationLink(destination: LandmarkList { LandmarkDetail(landmark: $0) }) {
                     Text("See All")
                 }
             }
